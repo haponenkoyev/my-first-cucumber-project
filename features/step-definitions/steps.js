@@ -45,8 +45,8 @@ When('I hover on {int}', async (picture) => {
     await $('.figure>img').moveTo();
 });
 
-Then('I should see {int} figcaption with content', async (message) => {
+Then('I should see figcaption with {string}', async ([message]) => {
     await expect(await $('.figure > img + .figcaption')).toBeExisting();
-    await expect(await $('.figure > img + .figcaption')).toHaveTextContaining(message);
+    await expect(await $('.figure > img + .figcaption')).toHaveTextContaining([message]);
 });
 
