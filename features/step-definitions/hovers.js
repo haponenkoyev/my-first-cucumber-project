@@ -5,11 +5,10 @@ Given('I am on the {string} page', async (page) => {
 });
 
 When('I hover on {int}', async (picture) => {
-    await $('//img[@src="/img/avatar-blank.jpg"]').moveTo();
+    await $('.figure>img').moveTo();
 });
 
 Then('I should see {int} figcaption with content', async (message) => {
-    const elem =await $('//img[@src="/img/avatar-blank.jpg"]');
-    await expect(await $('//img[@src="/img/avatar-blank.jpg"]')).toBeExisting();
-    await expect(await $('//img[@src="/img/avatar-blank.jpg"]')).toHaveTextContaining(message);
+    await expect(await $('.figure > img + .figcaption')).toBeExisting();
+    await expect(await $('.figure > img + .figcaption')).toHaveTextContaining(message);
 });

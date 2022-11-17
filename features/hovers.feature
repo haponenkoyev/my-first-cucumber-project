@@ -9,5 +9,5 @@ Then I should see <picture> figcaption with content
 Examples:
      | picture              | message      |
      | 1                    | name: user1  |
-     | 2                    | name: user2  |
-     | 3                    | name: user3  |
+     | 2                    | name: user1  |
+     | 3                    | name: user1  |
